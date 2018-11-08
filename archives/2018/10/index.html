@@ -1,24 +1,99 @@
-extends base
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.651055.css">
+	<link rel="shortcut icon" href="" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>jontysa</title>
+  
+  
+</head>
+<body>
+<div class="left-aside">
+    <div class="face-img"><img src=""></div>
+    <div class="intro-word">
+        <h2>jontysa</h2>
+        <p></p>
+    </div>
+    <div class="sns">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+<div class="right-aside">
+    <div class="right-nav ms">
+        <div class="main">
+            <ul class="left">
+                
+            </ul>
+            <div class="search">
+                <input type="search" id="search" class="input-search" placeholder="搜索">
+                <i class="icon-search"></i>
+                <div class="search-result-box">
+                  <ul id="search-result">
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-main">
+        <div class="category">
+            <ul>
+                <li><a href="/" class="">最新</a></li>
+                
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="list">
+            <div>
+                
+                
 
-block title
-  if page.category
-     title= page.category + ' | ' + config.title
-  if page.tag
-     title= page.tag + ' | ' + config.title
-  if page.archive
-     title= __('archive') + ' | ' + config.title
-block content
-  if page.category || page.tag
-      h1.label-title=  __('reading_label', page.category || page.tag)
-  .post
-    .post-archive
-        //Use lodash to classify posts. See https://lodash.com/docs#groupBy
-        each posts, year in _.groupBy(page.posts.toArray(), function(p){return -p.date.format('YYYY')})
-          h2= -year
-          ul.listing
-            for post in posts
-              li
-                span.date= post.date.format('YYYY/MM/DD')
-                a(href=url_for(post.path), title=post.title)
-                  +title(post)
-  include _partial/paginator.pug
+                
+                
+
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="hosted">
+          <ul>
+            <li class="coding">
+              <a href="https://coding.net/pages">
+                <img src="/./img/coding.png">
+              </a>
+            </li>
+            <li class="github-pages">
+              <a href="https://pages.github.com">
+                <img src="/./img/github-pages.png">
+              </a>
+            </li>
+          </ul>
+        </div>
+    </div>
+</div>
+<script>
+  var homeLeftBgArr = ''.split(',');
+  var homeLeftBgArrLen = homeLeftBgArr.length;
+  var leftBackgroundUrl = homeLeftBgArr[Math.floor(Math.random() * homeLeftBgArrLen)];
+  var homeLeftAsideNode = document.getElementsByClassName('left-aside')[0];
+  if (homeLeftAsideNode) {
+    homeLeftAsideNode.style.backgroundImage = 'url(' + leftBackgroundUrl + ')';
+  }
+</script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script type="text/javascript" src="/./js/main.651055.js"></script>
+
+</body>
+</html>
